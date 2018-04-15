@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>Upload</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <label>SwiftBuild</label>
+    <logo>SwiftBuild_folder/SwiftBuild_Logo.jpg</logo>
+    <tab>Upload</tab>
+</CustomApplication>

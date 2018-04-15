@@ -1,0 +1,30 @@
+<apex:page standardController="Export_Report__c" extensions="ReportExportStageController" sidebar="false" showHeader="false">
+    <apex:form >
+    <apex:pageblock >
+          <apex:outputText value="Page 2 of 4 " style="font-style:bold; margin-left: 50px; margin-right: 2px;" ></apex:outputText>   
+
+            </apex:pageblock>
+   		 <apex:pageblock >
+             <apex:pageBlockSection columns="1">
+          <!--	   <apex:outputLabel value="Report Name"></apex:outputLabel> -->
+             <apex:inputText value="{!exprep.Report_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+				 </apex:pageBlockSection>
+            </apex:pageblock>
+       <apex:pageblock > 
+        
+           <apex:pageBlockSection >
+       <!-- <apex:outputText value="Report Delivery Type" style="font-style:bold; margin-left: 500px; "></apex:outputText>
+               <apex:inputtext value="{!ReportDeliveryType}" style="margin-left: 2px; "/>
+                <apex:outputText value="Report Output Filename" style="font-style:bold; margin-left: 500px; "></apex:outputText>
+               <apex:inputtext value="{!ReportOutputFilename}" style="margin-left: 2px; "/> -->
+               <apex:inputfield value="{!exprep.Report_File_Name__c}"></apex:inputfield>
+                <apex:inputfield value="{!exprep.Report_Delivery_Type__c}"></apex:inputfield>
+               </apex:pageBlockSection>
+                       <apex:pageblockbuttons >
+                        <apex:commandButton action="{!Cancel}" value="Cancel"/>
+                   <apex:commandButton action="{!PrevButtonOne}" value="Prev" style="font-style:bold; margin-left: 600px;"/>
+                <apex:commandButton action="{!NextButtonOne}" value="Next"  />
+            </apex:pageblockbuttons>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

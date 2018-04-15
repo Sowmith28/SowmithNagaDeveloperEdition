@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:handler name="bubbleEvtReg" event="c.EventBubble" action='{!c.handleBubbleEvent}' phase="capture"/>
+    <c:BubbleEmitter />
+</aura:component>

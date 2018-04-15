@@ -1,0 +1,4 @@
+<aura:component >
+    <c:NotifierComponent />
+    <c:HandlerComponent />
+</aura:component>

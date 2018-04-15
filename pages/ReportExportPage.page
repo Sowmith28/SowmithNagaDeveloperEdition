@@ -1,0 +1,3 @@
+<apex:page controller="ReportExportController" contentType="application/vnd.ms-excel#AuroraUsersExternal.xls">
+  <c:ReportComponent rprtId="{!testreportId}" formatt="xls" showDtls="no"/> 
+</apex:page>

@@ -1,0 +1,35 @@
+<apex:page controller="accountcontact">
+    <apex:form >
+    <apex:pageBlock >
+        
+ <!--<apex:repeat value="{!accounts}" var="accWrap"> -->
+     <apex:pageblockTable value="{!accounts}" var="v">
+      <!--    <apex:column>
+   <apex:outputText value="User ID : {!v.userId}"/>
+		</apex:column>-->
+          <apex:column >
+   <apex:repeat value="{!v.accounts}" var="acc">
+       <apex:outputText value="Account : {!acc.Name}"/><br/>
+       </apex:repeat>
+	</apex:column>
+          <apex:column >
+              <apex:repeat value="{!v.accounts}" var="acc">
+      <apex:repeat value="{!acc.contacts}" var="cont">
+         <apex:outputText value="Contact : {!cont.Name}"/><br/>
+      </apex:repeat>
+                  
+	 </apex:repeat>
+   </apex:column>
+              <apex:column >
+              <apex:repeat value="{!v.accounts}" var="acc">
+      <apex:repeat value="{!acc.Opportunities}" var="cont">
+         <apex:outputText value="Opportunity : {!cont.Name}"/><br/>
+      </apex:repeat>
+                  
+	 </apex:repeat>
+   </apex:column>
+</apex:pageblockTable>
+<!--</apex:repeat> -->
+   </apex:pageBlock>
+    </apex:form>
+</apex:page>

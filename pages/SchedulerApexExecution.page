@@ -1,0 +1,57 @@
+<!--  Page: -->
+<apex:page controller="ScheduleApexExecutionController">
+    <script>
+    function RadioButtonOnChange(){
+        //alert('Entered Javascript') ;
+        CallApexMethod();
+        }
+    function hidebaseObject(){
+        CallApexMethod();
+        var coun = '{!Country}';
+        alert( '{!Country}') ;
+        if(coun=== "Weekly"){
+        document.getElementById('baseObjectForm').style.display = 'none';
+            }
+        if(coun === "Monthly"){
+        document.getElementById('relatedObjectForm').style.display = 'none';
+            }
+     }
+    </script>
+    <apex:form >
+        <table>
+        <th>Frequency</th>    
+      <tr>
+          <apex:actionFunction name="CallApexMethod" action="{!incrementCounter}" onComplete="alert('After apex method') ;"/>
+        <apex:outputpanel id="counter">
+            <apex:outputText value="Frequency"/>
+            <apex:selectRadio value="{!country}" id="RadioButton" onclick="hidebaseObject();"><!--onclick="RadioButtonOnChange();" >  -->
+           <!-- <apex:selectOptions value="{!items}" />
+                <apex:actionSupport event="onchange" oncomplete="hidebaseObject();" reRender=""/> -->
+                <apex:selectOption itemLabel="Weekly" itemValue="Weekly"></apex:selectOption>
+    			<apex:selectOption itemLabel="Monthly" itemValue="Monthly"> </apex:selectOption>
+            </apex:selectRadio><p/>
+            <apex:actionSupport event="onchange" 
+                                action="{!incrementCounter}" 
+                                rerender="RadioButton" status="counterStatus"/>
+              <div id="baseObjectForm">
+            <apex:pageBlock id="pb1" >
+               <apex:selectCheckboxes value="{!DayOfWeek}">
+                 <apex:selectOptions value="{!Day}"/>
+                </apex:selectCheckboxes>
+            </apex:pageBlock>
+            </div>
+             <div id="relatedObjectForm">
+            <apex:pageBlock id="pb2" >
+               <apex:selectRadio value="{!DayOfWeek}">
+                 <apex:selectOptions value="{!Day}"/>
+               </apex:selectRadio> 
+            </apex:pageBlock>
+            </div>
+        </apex:outputpanel>
+        <apex:actionStatus id="counterStatus" 
+                           startText=" (incrementing...)" 
+                           stopText=" (done)"/>
+          </tr>
+              </table>
+    </apex:form>
+</apex:page>

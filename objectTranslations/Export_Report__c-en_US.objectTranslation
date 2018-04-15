@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Export Report</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Export Reports</value>
+    </caseValues>
+    <fields>
+        <label><!-- Bcc address --></label>
+        <name>Bcc_address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Delivery Type --></label>
+        <name>Report_Delivery_Type__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTP</masterLabel>
+            <translation><!-- FTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sharepoint</masterLabel>
+            <translation><!-- Sharepoint --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Report File Name --></label>
+        <name>Report_File_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Id --></label>
+        <name>Report_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Name --></label>
+        <name>Report_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- To address --></label>
+        <name>To_address__c</name>
+    </fields>
+    <fields>
+        <label><!-- When to Run --></label>
+        <name>When_to_Run__c</name>
+    </fields>
+    <fields>
+        <label><!-- cc address --></label>
+        <name>cc_address__c</name>
+    </fields>
+    <fields>
+        <label><!-- isActive --></label>
+        <name>isActive__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

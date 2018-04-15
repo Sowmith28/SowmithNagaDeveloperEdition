@@ -1,0 +1,37 @@
+<apex:page standardController="Export_Report__c" extensions="ReportExportStageController" sidebar="false" showHeader="false">
+    <apex:form >
+    <apex:pageblock >
+          <apex:outputText value="Page 3 of 4 " style="font-style:bold; margin-left: 50px; margin-right: 2px;" ></apex:outputText>   
+
+            </apex:pageblock>
+            <apex:pageblock >
+                 <apex:pageBlockSection columns="1">
+           <!--	 	<apex:outputLabel value="Report Name"></apex:outputLabel>-->
+             <apex:inputText value="{!exprep.Report_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+			 </apex:pageBlockSection>
+            </apex:pageblock>
+        
+                 
+            <apex:pageblock >
+                 <apex:pageBlockSection columns="1">
+           <!--	 <apex:outputLabel value="Report File Name"></apex:outputLabel>-->
+             <apex:inputText value="{!exprep.Report_File_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+ 			 <!--	<apex:outputLabel value="Report Delivery Name"></apex:outputLabel>-->
+             <apex:inputText value="{!exprep.Report_Delivery_Type__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+				 </apex:pageBlockSection>
+            </apex:pageblock>
+       <apex:pageblock > 
+           <apex:pageBlockSection >
+       <!-- <apex:outputText value="Email Details" style="font-style:bold; margin-left: 500px; "></apex:outputText>-->
+               <apex:inputfield value="{!exprep.To_address__c}" style="margin-left: 2px; "/>
+                <apex:inputfield value="{!exprep.cc_address__c}" style="margin-left: 2px; "/>
+               <apex:inputfield value="{!exprep.Bcc_address__c}" style="margin-left: 2px; "/>
+               </apex:pageBlockSection>
+                       <apex:pageblockbuttons >
+                        <apex:commandButton action="{!Cancel}" value="Cancel"/>
+                   <apex:commandButton action="{!PrevButtonTwo}" value="Prev" style="font-style:bold; margin-left: 600px;"/>
+                <apex:commandButton action="{!NextButtonTwo}" value="Next"  />
+            </apex:pageblockbuttons>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

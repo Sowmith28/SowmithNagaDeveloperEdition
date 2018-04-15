@@ -1,0 +1,44 @@
+<apex:page standardController="Export_Report__c" extensions="editCustomReportController" sidebar="false" showHeader="false" >
+   <apex:form >
+    <br/>
+    <br/>
+      <!-- <apex:pageBlock >
+           <apex:outputText value="{!ReportName}"></apex:outputText>
+       </apex:pageBlock> -->
+       <apex:pageblock id="pbs1" >
+      <apex:outputText value="Page 2 of 4 " style="font-style:bold; margin-left: 50px; margin-right: 2px;" ></apex:outputText>   
+       </apex:pageblock>
+        <apex:pageblock title="Export Report Details" >
+             <apex:pageBlockSection columns="1">
+          <!--     <apex:outputLabel value="Report Name"></apex:outputLabel> -->
+             <apex:outputfield value="{!exprep.Report_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+                 
+              <apex:outputfield value="{!exprep.Report_Id__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+                <apex:outputfield value="{!exprep.isActive__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />  
+            </apex:pageBlockSection>
+            </apex:pageblock>
+    
+        
+        <apex:pageBlock >       
+         <apex:pageblockSection columns="1">             
+             
+             <apex:pageMessage summary="Please enter the Report output file name with .csv extension." severity="warning" strength="3" />
+             <apex:pageMessages />
+
+             
+             <apex:inputfield value="{!exprep.Report_File_Name__c}"   /> 
+             <apex:inputField value="{!exprep.Report_Delivery_Type__c}" required="true"  />
+
+                         
+         </apex:pageblockSection>
+           <apex:pageblockbuttons location="bottom">
+              <apex:commandButton action="{!CancelButton}" value="Cancel" style="margin-left: -400px;" immediate="True" />
+                <apex:outputPanel style="float:right ">
+               <apex:commandButton action="{!PrevButtonOne}" value="Previous" style="margin-left: 600px; margin-right: 20px; " immediate="True"  />
+               <apex:commandButton action="{!NextButtonTwo}" value="Next" />
+                <apex:commandButton action="{!SaveButtonTwo}" value="Save" />
+               </apex:outputPanel>
+           </apex:pageblockbuttons>
+       </apex:pageBlock>       
+   </apex:form>
+</apex:page>

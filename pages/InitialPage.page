@@ -1,0 +1,187 @@
+<apex:page docType="html-5.0" sidebar="false" title="Initial Page" controller="initialpagecontroller" standardStylesheets="false" >
+<apex:includeScript value="{!$Resource.jquery_min}"/>
+<apex:includeScript value="{!$Resource.shim}"/>
+<apex:includeScript value="{!$Resource.jszip}"/>
+<apex:includeScript value="{!$Resource.xlsx}"/>
+<apex:includeScript value="{!$Resource.ods}"/>
+
+<style>
+    .custom-file-input {
+        display: inline-block;
+        //float: right;
+        position: relative;
+       // left: -50%;
+        color: #533e00;
+    }
+    .custom-file-input input {
+        visibility: hidden;
+        width: 150px;
+    }
+    .custom-file-input:before {
+        content: 'Choose File';
+        display: block;
+        background: -webkit-linear-gradient( -180deg, #ffdc73, #febf01);
+        background: -o-linear-gradient( -180deg, #ffdc73, #febf01);
+        background: -moz-linear-gradient( -180deg, #ffdc73, #febf01);
+        background: linear-gradient( -180deg, #ffdc73, #febf01);
+        border: 3px solid #dca602;
+        border-radius: 10px;
+        padding: 5px 0px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px rgba(255,255,255,0.7);
+        font-weight: bold;
+        text-align: center;
+        font-size: 10pt;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .custom-file-input:hover:before {
+        border-color: #febf01;
+    }
+        .custom-file-input:active:before {
+        background: #febf01;
+    }
+    .file-blue:before {
+        content: 'Browse File';
+        background: -webkit-linear-gradient( -180deg, #99dff5, #02b0e6);
+        background: -o-linear-gradient( -180deg, #99dff5, #02b0e6);
+        background: -moz-linear-gradient( -180deg, #99dff5, #02b0e6);
+        background: linear-gradient( -180deg, #99dff5, #02b0e6);
+        border-color: #57cff4;
+        color: #FFF;
+        text-shadow: 1px 1px rgba(000,000,000,0.5);
+    }
+    .file-blue:hover:before {
+        border-color: #02b0e6;
+    }
+    .file-blue:active:before {
+        background: #02b0e6;
+    }
+</style>
+
+<style>
+    
+    .loader {
+        display: none;        
+       // float: right;
+        position: relative;
+      //  left: -50%;
+        z-index: 999;
+        margin: 1em 0;
+        padding: 4px;
+        min-width:200px;
+        background: #fcfaf0;
+        border: 2px solid #e0d8b7;
+        border-radius: 1em;
+        font-size: 2em;
+        text-align : center;
+        -webkit-transition: .6s cubic-bezier(0,1.5,.5,1);
+        -moz-transition: .6s cubic-bezier(0,1.5,.5,1);
+        -o-transition: .6s cubic-bezier(0,1.5,.5,1);
+        transition: .6s cubic-bezier(0,1.5,.5,1);
+    }
+</style>
+<script>
+var oFileIn;
+
+$(function() {
+    oFileIn = document.getElementById('my_file_input');
+    try {
+        if(oFileIn.addEventListener) {
+            oFileIn.addEventListener('change', filePicked, false);
+        }
+    }
+    catch(err) {
+        $('#loading').hide();
+        $("#my_file_output").show();
+        $("#my_file_output").html(err);
+        $("#my_file_output").css("background", "red");
+    }
+});
+var X = XLSX;
+
+function filePicked(oEvent) {
+    
+    // Get The File From The Input
+    var oFile = oEvent.target.files[0];
+    var sFilename = oFile.name;
+    // Create A File Reader HTML5
+    var reader = new FileReader();
+    console.debug('OK');
+    
+    // Ready The Event For When A File Gets Selected
+    reader.onload = function(e) {
+        try{
+            $('#loading').show();
+            $('#my_file_output').hide();
+            var data = e.target.result;
+            //var cfb = XLS.CFB.read(data, {type: 'binary'});
+            //var wb = XLS.parse_xlscfb(cfb);
+            var wb = X.read(data, {type: 'binary'});
+            // Loop Over Each Sheet
+            var total = [];
+            var inputxls =null;
+            wb.SheetNames.forEach(function(sheetName) {
+                // Obtain The Current Row As CSV
+               // var sCSV = XLS.utils.make_csv(wb.Sheets[sheetName]);   
+                var sCSV = X.utils.sheet_to_csv(wb.Sheets[sheetName]);
+                console.debug(sCSV );
+               // inputxls = XLS.utils.sheet_to_row_object_array(wb.Sheets[sheetName]);   
+                total.push(sCSV );
+                
+               // total += "<br /><b>"+sheetName+"</b><br />"+sCSV ;
+            });
+            
+            Visualforce.remoting.timeout = 120000; // Increase the SFDC remote action timeout time to 2 min.
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.initialpagecontroller.processInput}',
+                total , 
+                function(result, event){
+                    if (event.status) {
+                        $('#loading').hide();
+                        $("#my_file_output").show();
+                        $("#my_file_output").html(result); 
+                        $("#my_file_output").css("background", "#fcfaf0");                       
+                        
+                    } else if (event.type === 'exception') {
+                        
+                    } else {
+                        
+                    }
+                    //setTimeout(function () { location.reload(true); }, 5000);
+                }, 
+                {escape: false}
+            );
+            
+       }
+       catch(err) {           
+            $('#loading').hide();
+            $("#my_file_output").show();
+            $("#my_file_output").html(err);
+            $("#my_file_output").css("background", "red");
+            //setTimeout(function () { location.reload(true); }, 5000);
+        }
+       
+    };
+    
+    // Tell JS To Start Reading The File.. You could delay this if desired
+    reader.readAsBinaryString(oFile);
+}
+</script>
+<table width="10%" align="center">
+<tr><td align="center">
+<label  class="custom-file-input file-blue">
+    <input type="file" id="my_file_input" accept=".xls,.xlsx"/>    
+</label>
+</td></tr>
+<tr><td align="center">
+<div Id="loading" class="loader">
+    Processing......
+</div>
+<div id='my_file_output' class="loader"></div> 
+</td></tr> 
+</table>
+</apex:page>

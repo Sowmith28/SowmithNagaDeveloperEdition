@@ -1,0 +1,21 @@
+<apex:page >
+          <script src="../../soap/ajax/40.0/connection.js" type="text/javascript"></script>
+          <script>
+             try{
+  var result = sforce.connection.login('Sowmith.naga28@gmail.com', 'amma!288WxwhlZIrHcIhJAdFKE5odMWFq');
+   
+  alert("logged in with session id " + result.sessionId);
+                 console.log(result.sessionId);
+}catch(error) {
+  if (error.faultcode.indexOf("INVALID_LOGIN") != -1) {
+    //log("check your username and passwd, invalid login");
+    alert('check your username and passwd, invalid login');
+  } else {
+   // log(error);
+        alert(error);
+
+  }
+}
+          </script>
+     .
+</apex:page>

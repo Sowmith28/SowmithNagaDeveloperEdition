@@ -1,0 +1,7 @@
+<apex:page controller="attributecomponentvfcontroller" action="{!getUserCountryfromIPAddress}">
+    <apex:form >
+	<c:attributecomponent attribute1="This is a Test attribute" ></c:attributecomponent>
+        <br/>
+    <apex:outputText value="{!countryvariable}"></apex:outputText>
+  </apex:form>
+</apex:page>

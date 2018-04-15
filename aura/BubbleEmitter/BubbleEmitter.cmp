@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:registerEvent name="bubbleEvtReg" type="c.EventBubble"/>
+    <aura:handler name="bubbleEvtReg" event="c.EventBubble" action='{!c.handleBubbleEvent}' phase="capture"/>
+    <ui:button label="Bubble Emitter" press='{!c.bubbleEmitter}' />
+</aura:component>

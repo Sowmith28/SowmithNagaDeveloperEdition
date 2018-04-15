@@ -1,0 +1,38 @@
+<apex:page standardController="Export_Report__c" extensions="editCustomReportController" sidebar="false" showHeader="false" >
+   <apex:form >
+	<br/>
+	<br/>       
+     <apex:pageblock id="pbs3" >
+      <apex:outputText value="Page 4 of 4 " style="font-style:bold; margin-left: 50px; margin-right: 2px;" ></apex:outputText>           
+       </apex:pageblock>
+              <apex:pageblock title="Export Report Details"  >
+             <apex:pageBlockSection columns="2">
+             <apex:outputfield value="{!exprep.Report_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+              <apex:outputfield value="{!exprep.Report_Id__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+              <apex:outputfield value="{!exprep.isActive__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />  
+                 <apex:outputfield value="{!exprep.Report_File_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+              <apex:outputfield value="{!exprep.Report_Delivery_Type__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />                 
+				 </apex:pageBlockSection>
+            </apex:pageblock>
+       <apex:pageblock title="Email" >
+             <apex:pageBlockSection columns="2">
+             <apex:outputfield value="{!exprep.To_address__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+              <apex:outputfield value="{!exprep.cc_address__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+             <apex:outputfield value="{!exprep.Bcc_address__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+				 </apex:pageBlockSection>
+            </apex:pageblock>
+        <apex:pageBlock title="Schedule" >    
+            <apex:pageMessages ></apex:pageMessages>
+         <apex:pageblockSection columns="2">
+             <apex:inputfield value="{!exprep.When_to_Run__c}" />          
+         </apex:pageblockSection>
+           <apex:pageblockbuttons location="bottom" >
+              <apex:commandButton action="{!CancelButton}" value="Cancel" style="margin-left: -450px;" immediate="True" />
+              <apex:outputPanel style="float:right ">
+              <apex:commandButton action="{!PrevButtonThree}" value="Previous" style="margin-left: 600px; margin-right: 20px;" immediate="True" />
+               <apex:commandButton action="{!SaveButtonFour}" value="Save" />
+               </apex:outputPanel>
+           </apex:pageblockbuttons>
+       </apex:pageBlock>       
+   </apex:form>
+</apex:page>

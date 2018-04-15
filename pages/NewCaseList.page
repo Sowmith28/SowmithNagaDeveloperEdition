@@ -1,0 +1,36 @@
+<apex:page controller="NewCaseListController" id="pageid">
+    <apex:form id="Formid">
+        <apex:pageBlock title="Cases with status as New">
+            <apex:repeat value="{!NewCases}" var="case">
+                <apex:outputLink value="https://ap2.salesforce.com/{!case.id}" >
+                   case.id
+                    <br/>
+                </apex:outputLink>
+            </apex:repeat>
+        </apex:pageBlock>
+        
+        
+        <apex:pageBlock title="Contacts list in the Org" id="contact_list">
+            <apex:pageBlockTable value="{!ContactList}" var="ct">
+                <apex:column value="{! ct.firstname}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByFirstname}" reRender="contact_list">FirstName</apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                
+                <apex:column value="{!ct.LastName}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByLastname}" reRender="contact_list">LastName</apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                
+                <apex:column value="{!ct.title}">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByTitle}" reRender="contact_list">Title</apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                
+            </apex:pageBlockTable>>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product_Sales_for_1997</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product_Sales_for_1997</value>
+    </caseValues>
+    <fields>
+        <label><!-- CategoryName --></label>
+        <name>CategoryName__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProductName --></label>
+        <name>ProductName__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProductSales --></label>
+        <name>ProductSales__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

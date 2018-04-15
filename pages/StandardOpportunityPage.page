@@ -1,0 +1,18 @@
+<apex:page standardController="Opportunity" sidebar="false">
+    <apex:pageBlock title="Sowmith">
+        <apex:form >
+            <apex:pageBlockSection collapsible="true" columns="2" title="Title1">
+                <apex:inputField value="{!Opportunity.Name}" />
+                <apex:inputField value="{!Opportunity.Probability}" />
+                <apex:inputField value="{!Opportunity.CloseDate}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection collapsible="false" columns="1" title="Title2">
+                <apex:inputField value="{!Opportunity.Amount}" />
+                <apex:inputField value="{!Opportunity.ExpectedRevenue}" />
+                <apex:inputField value="{!Opportunity.StageName}" />
+                <apex:commandButton action="{!delete}" value="Submit"/>
+            </apex:pageBlockSection>
+        </apex:form>
+        
+    </apex:pageBlock>
+</apex:page>

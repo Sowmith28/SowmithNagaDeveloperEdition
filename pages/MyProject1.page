@@ -1,0 +1,24 @@
+<apex:page controller="ProjectController1">
+    <apex:form >
+        
+        <apex:pageBlock >
+   <apex:pageBlocksection columns="2" id="object_list">
+        
+       <apex:outputLabel value="Select the object" ></apex:outputLabel>
+       <apex:selectList value="{!SelectObject}" size="1" multiselect="false" >
+           <apex:selectOptions value="{!TotalObject}"/>
+           <apex:actionSupport event="onchange"  reRender="object_list"/>
+       </apex:selectList>
+       
+       
+       
+       <apex:outputLabel value="Select the child object"></apex:outputLabel>
+       <apex:selectList value="{!SelectChildObject}" size="1" onchange="{!TotalObject}" >
+           <apex:selectOptions value="{!ChildObject}" />
+       </apex:selectList>
+       
+       
+        </apex:pageBlocksection>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

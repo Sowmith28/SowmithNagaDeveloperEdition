@@ -1,0 +1,18 @@
+<apex:page standardcontroller="Account" >
+    <apex:PageBlock >
+    <apex:tabPanel switchType="client">
+      <apex:tab label="Detail" name="AccDetail" id="acctab">
+          <apex:detail relatedList="true"/>
+        </apex:tab>  
+      <apex:tab label="contacts" name="Contacts" id="contacttab">
+          <apex:relatedList subject="{!account}" list="contacts"/>
+        </apex:tab>  
+      <apex:tab label="opportunities" name="opportunities" id="opportunitiestab">
+          <apex:relatedList subject="{!account}" list="opportunities"/>
+        </apex:tab>  
+      <apex:tab label="Open Activity" name="openactivity" id="oppacctab">
+          <apex:relatedList subject="{!account}" list="openActivities"/>
+        </apex:tab>  
+  </apex:tabPanel>
+  </apex:PageBlock>    
+</apex:page>

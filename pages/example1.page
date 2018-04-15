@@ -1,0 +1,11 @@
+<apex:page >
+    <apex:sectionHeader title="king of cts" subtitle="Hyderabad" description="Desowja" rendered="true" help="http://www.cognizant.com/"/>
+<apex:actionStatus onclick="http://www.cognizant.com/">
+ 
+    
+    
+    </apex:actionStatus>
+
+
+
+</apex:page>

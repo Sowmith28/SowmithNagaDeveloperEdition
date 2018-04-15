@@ -1,0 +1,69 @@
+<aura:component controller="testapexListController">
+    <aura:attribute name="accList" type="Contact[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <table  class="slds-table slds-table--bordered slds-table--cell-buffer">
+        <thead>
+            <tr class="slds-text-title--caps">
+                <th scope="col">
+                    <div class="slds-truncate" title="Contact ID">Contact ID</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Contact Name">Contact Name</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Title">Title</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Department">Department</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Status">Status</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.accList}" var="acc">
+                <aura:if isTrue="{!not(acc.Department=='Finance')}">
+                <tr>
+                    <td data-label="Contact ID">
+                        <div class="slds-truncate" title="Contact ID">{!acc.Id}</div>
+                    </td>
+                    <td data-label="Contact Name">
+                        <div class="slds-truncate" title="Contact Name">{!acc.Name}</div>
+                    </td>
+                    <td data-label="Title">
+                        <div class="slds-truncate" title="Title">{!acc.Title}</div>
+                    </td>
+                    <td data-label="Title">
+                        <div class="slds-truncate" title="Department">{!acc.Title}</div>
+                    </td>
+                    <td data-label="Status">
+                        <div class="slds-truncate" title="Status">{!acc.Department == 'Finance'?'Yes':'No'}</div>
+                    </td>
+                   
+                </tr>
+                    
+                    <aura:set attribute="else" >
+                    <tr>
+                    <td data-label="Contact ID">
+                        <div class="slds-truncate" title="Contact ID">{!acc.Id}</div>
+                    </td>
+                    <td data-label="Contact Name">
+                        <div class="slds-truncate" title="Contact Name">{!acc.Name}</div>
+                    </td>
+                    <td data-label="Title">
+                        <div class="slds-truncate" title="Title">{!acc.Title}</div>
+                    </td>
+                    <td data-label="Department">
+                        <div class="slds-truncate" title="Department">{!acc.Department}</div>
+                    </td>
+                         <td data-label="Status">
+                        <div class="slds-truncate" title="Status">{!acc.Department == 'Finance'?'Yes':'No'}</div>
+                    </td>
+                </tr>
+                    </aura:set>
+                    </aura:if>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

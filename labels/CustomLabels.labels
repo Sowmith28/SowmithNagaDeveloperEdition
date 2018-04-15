@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Action</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Action</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>Allow_Activities</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Allow Activities</shortDescription>
+        <value>11</value>
+    </labels>
+    <labels>
+        <fullName>Allow_Bulk_API_Access</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Allow Bulk API Access</shortDescription>
+        <value>16</value>
+    </labels>
+    <labels>
+        <fullName>Allow_Reparenting</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Allow Reparenting</shortDescription>
+        <value>25</value>
+    </labels>
+    <labels>
+        <fullName>Allow_Reports</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Allow Reports</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>Allow_Search</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Allow Search</shortDescription>
+        <value>19</value>
+    </labels>
+    <labels>
+        <fullName>Allow_Sharing</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Allow Sharing</shortDescription>
+        <value>15</value>
+    </labels>
+    <labels>
+        <fullName>Allow_Streaming_API_Access</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Allow Streaming API Access</shortDescription>
+        <value>17</value>
+    </labels>
+    <labels>
+        <fullName>Allow_in_Chatter_Groups</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Allow in Chatter Groups</shortDescription>
+        <value>14</value>
+    </labels>
+    <labels>
+        <fullName>App_Default</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>App Default</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>App_Name</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>App Name</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>App_Settings_Details</fullName>
+        <categories>Profile Headers</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>App Settings - Details</shortDescription>
+        <value>App Settings - Details</value>
+    </labels>
+    <labels>
+        <fullName>App_Visible</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>App Visible</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Blank_Field_Handling</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Blank Field Handling</shortDescription>
+        <value>22</value>
+    </labels>
+    <labels>
+        <fullName>Child_Relationship_Name</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Child Relationship Name</shortDescription>
+        <value>24</value>
+    </labels>
+    <labels>
+        <fullName>Column_Names_API</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Column Names(API)</shortDescription>
+        <value>4</value>
+    </labels>
+    <labels>
+        <fullName>Compact_Layout_Assignment</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Compact Layout Assignment</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>Content_Source</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Content Source</shortDescription>
+        <value>6</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Button_and_Web_Link</fullName>
+        <categories>Work Book Labels</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Custom Button and Web Link</shortDescription>
+        <value>Custom Button and Web Link</value>
+    </labels>
+    <labels>
+        <fullName>Decimal_Places</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Decimal Places</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>Default_Tab</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Default Tab</shortDescription>
+        <value>20</value>
+    </labels>
+    <labels>
+        <fullName>Default_Value</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Default Value</shortDescription>
+        <value>21</value>
+    </labels>
+    <labels>
+        <fullName>Delete</fullName>
+        <categories>Action Name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>Deployment_Status</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Deployment Status</shortDescription>
+        <value>18</value>
+    </labels>
+    <labels>
+        <fullName>Display_Format</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Display Format</shortDescription>
+        <value>9</value>
+    </labels>
+    <labels>
+        <fullName>Display_Type</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Display Type</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Do_Nothing</fullName>
+        <categories>Action Name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Do Nothing</shortDescription>
+        <value>Do Nothing</value>
+    </labels>
+    <labels>
+        <fullName>Editable</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Editable</shortDescription>
+        <value>32</value>
+    </labels>
+    <labels>
+        <fullName>External_ID</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>External ID</shortDescription>
+        <value>20</value>
+    </labels>
+    <labels>
+        <fullName>Field_Description</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Description</shortDescription>
+        <value>15</value>
+    </labels>
+    <labels>
+        <fullName>Field_Details</fullName>
+        <categories>Work Book Labels</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Details</shortDescription>
+        <value>Field Details</value>
+    </labels>
+    <labels>
+        <fullName>Field_Length</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Length</shortDescription>
+        <value>4</value>
+    </labels>
+    <labels>
+        <fullName>Field_Level_Security_Details</fullName>
+        <categories>Profile Headers</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Level Security - Details</shortDescription>
+        <value>Field Level Security - Details</value>
+    </labels>
+    <labels>
+        <fullName>Field_Name</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Name</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>Field_Type</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Type</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Field_to_Aggregate</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field to Aggregate</shortDescription>
+        <value>29</value>
+    </labels>
+    <labels>
+        <fullName>Filter</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Scope</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Scope</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Final</fullName>
+        <categories>Success</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Final</shortDescription>
+        <value>Finished Successfully</value>
+    </labels>
+    <labels>
+        <fullName>Formula</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Formula</shortDescription>
+        <value>12</value>
+    </labels>
+    <labels>
+        <fullName>Formula_Return_Type</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Formula Return Type</shortDescription>
+        <value>11</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Help Text</shortDescription>
+        <value>16</value>
+    </labels>
+    <labels>
+        <fullName>Label</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Label</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Managed_List_View</fullName>
+        <categories>Work Book Labels</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Managed List View</shortDescription>
+        <value>Managed List View</value>
+    </labels>
+    <labels>
+        <fullName>Managed_Validation_Rule</fullName>
+        <categories>Work Book Labels</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Managed Validation Rule</shortDescription>
+        <value>Managed Validation Rule</value>
+    </labels>
+    <labels>
+        <fullName>Mask_Character</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Mask Character</shortDescription>
+        <value>14</value>
+    </labels>
+    <labels>
+        <fullName>Mask_Type</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Mask Type</shortDescription>
+        <value>13</value>
+    </labels>
+    <labels>
+        <fullName>ObjectAPI</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ObjectAPI</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>Object_Description</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Object Description</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>Object_Details</fullName>
+        <categories>Work Book Labels</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Object Details</shortDescription>
+        <value>Object Details</value>
+    </labels>
+    <labels>
+        <fullName>Object_Label</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Object Label</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Object_Label_Plural</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Object Label Plural</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Page_Layout_Assignment</fullName>
+        <categories>Work Book Labels</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Page Layout Assignment</shortDescription>
+        <value>Page Layout Assignment</value>
+    </labels>
+    <labels>
+        <fullName>Picklist_Definition</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Picklist Definition</shortDescription>
+        <value>6</value>
+    </labels>
+    <labels>
+        <fullName>Profile_Action</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Profile Action</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>Profile_Custom</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Profile Custom</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Profile_Desc</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Profile Desc</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>Profile_Details</fullName>
+        <categories>Profile Headers</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Profile Details</shortDescription>
+        <value>Profile Details</value>
+    </labels>
+    <labels>
+        <fullName>Profile_Editable</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Profile Editable</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Profile_Field_Name</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Profile Field Name</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Profile_Name</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Profile Name</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>RActive</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RActive</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>RDescription</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RDescription</shortDescription>
+        <value>4</value>
+    </labels>
+    <labels>
+        <fullName>Read_only</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Read only</shortDescription>
+        <value>33</value>
+    </labels>
+    <labels>
+        <fullName>Readable</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Readable</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>Record_Name</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Name</shortDescription>
+        <value>6</value>
+    </labels>
+    <labels>
+        <fullName>Record_Type</fullName>
+        <categories>Work Book Labels</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Record Type</shortDescription>
+        <value>Managed Record Type</value>
+    </labels>
+    <labels>
+        <fullName>Related_To</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Related To</shortDescription>
+        <value>23</value>
+    </labels>
+    <labels>
+        <fullName>Required</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required</shortDescription>
+        <value>17</value>
+    </labels>
+    <labels>
+        <fullName>Roll_Up_Type</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Roll-Up Type</shortDescription>
+        <value>28</value>
+    </labels>
+    <labels>
+        <fullName>Sort_Option</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort Option</shortDescription>
+        <value>7</value>
+    </labels>
+    <labels>
+        <fullName>Starting_Number</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Starting Number</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>Summarized_Object</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Summarized Object</shortDescription>
+        <value>27</value>
+    </labels>
+    <labels>
+        <fullName>Tab_Name</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tab Name</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Tab_Settings_Details</fullName>
+        <categories>Profile Headers</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tab Settings - Details</shortDescription>
+        <value>Tab Settings - Details</value>
+    </labels>
+    <labels>
+        <fullName>Tab_Visibility</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tab Visibility</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>Track_Field_History</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Track Field History</shortDescription>
+        <value>13</value>
+    </labels>
+    <labels>
+        <fullName>URL</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>URL</shortDescription>
+        <value>4</value>
+    </labels>
+    <labels>
+        <fullName>Unique</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Unique</shortDescription>
+        <value>18</value>
+    </labels>
+    <labels>
+        <fullName>Upsert</fullName>
+        <categories>Action Name</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Upsert</shortDescription>
+        <value>Upsert</value>
+    </labels>
+    <labels>
+        <fullName>User_License</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>User License</shortDescription>
+        <value>4</value>
+    </labels>
+    <labels>
+        <fullName>VDRActive</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VDRActive</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>VDRDescription</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VDRDescription</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>VDR_Error_Location</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VDR Error Location</shortDescription>
+        <value>6</value>
+    </labels>
+    <labels>
+        <fullName>VDR_Error_Message</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VDR Error Message</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>VDR_Error_formula</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>VDR Error formula</shortDescription>
+        <value>4</value>
+    </labels>
+    <labels>
+        <fullName>Visible_Lines</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription># Visible Lines</shortDescription>
+        <value>8</value>
+    </labels>
+    <labels>
+        <fullName>vowel_sound</fullName>
+        <categories>Input Column</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>vowel sound</shortDescription>
+        <value>4</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,33 @@
+<aura:component controller="testapexListController" implements="flexipage:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="accRec" type="Account" default="{'sobjectType':'Account'}"/>
+    <aura:attribute name="cmpHeader" type="String"/>
+    <h3 class="slds-section-title--divider">
+        {!v.cmpHeader}
+    </h3>
+    <div class="slds-form-stacked">
+        <div class="slds-form-element">
+        <label class="slds-form-element__label" for="inputSample2">Account Name</label>
+        <div class="slds-form-element__control">
+            <ui:inputText value="{!v.accRec.Name}" aura:id="accName"/>
+        </div>
+    </div>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="textareaSample2">Account Number</label>
+        <div class="slds-form-element__control">
+            <ui:inputText value="{!v.accRec.AccountNumber}" aura:id="accNumber"/>
+        </div>
+    </div>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="textareaSample2">Phone</label>
+        <div class="slds-form-element__control">
+            <ui:inputText value="{!v.accRec.Phone}" aura:id="Phone"/>
+        </div>
+    </div>
+   
+    
+    <div>
+        <ui:button label="Save" press="{!c.save}" class="slds-button slds-button--brand"/>
+    </div>
+         </div>
+</aura:component>

@@ -1,0 +1,4 @@
+<apex:component >
+    <apex:attribute name="attribute1" type="String" description="Testing attribute"/> 
+      <apex:outputText value="{!attribute1}"></apex:outputText>
+</apex:component>

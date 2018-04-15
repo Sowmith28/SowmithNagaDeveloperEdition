@@ -1,0 +1,63 @@
+<apex:page standardController="Export_Report__c" extensions="ReportExportStageController">
+    <apex:form >
+            <apex:pageBlock title="Existing Reports" id="pb2">
+                <apex:commandButton action="{!CreateNewRecord}" value="New" style="margin-Right: 400px; margin-left: 500px;"/>
+                <br/>
+         <apex:pageblockSection >
+             
+             <apex:inputtext value="{!exprep.Report_Name__c}" id="rpName1" style="margin-right:20px;" ></apex:inputtext>
+             <apex:commandButton value="Search"  reRender="pb1,myButtons" style="margin-Right: 100px; margin-left: -200px;" />
+            </apex:pageblockSection>            
+           <apex:pageBlockTable value="{!exportReports}" var="r" id="pb1">
+              <!--  <apex:column ><apex:commandLink action="{!URLFOR($Action.Export_Report__c.Edit, r.Id, null, true)}" value="Edit"/></apex:column> -->
+               
+               <apex:column >
+                  
+                   <apex:commandLink value="View" action="{!viewRecord}">
+                    <apex:param name="exportId" value="{!r.id}" assignTo="{!exportid}"/>
+                   </apex:commandLink>
+                    &nbsp;
+                   <apex:commandLink value="Edit" action="{!RedirecttoEdit}"> 
+                   <apex:param name="exportId" value="{!r.id}" assignTo="{!exportid}"/>
+                   </apex:commandLink>
+                   &nbsp;
+                   <apex:commandLink value="Del"  onclick="if(!confirm('Are you sure?')) return false;"  action="{!deleteRecord}">
+                    <apex:param name="exportId" value="{!r.id}" assignTo="{!exportid}"/>
+                   </apex:commandLink>
+                                      
+                   </apex:column> 
+                     <apex:column >
+				  <apex:facet name="header">
+					<apex:outputPanel >Report Name</apex:outputPanel>
+				  </apex:facet>
+                    {!r.Report_Name__c}  
+                  </apex:column>             
+                   <apex:column >
+				  <apex:facet name="header">
+					<apex:outputPanel >Id</apex:outputPanel>
+				  </apex:facet>
+                    {!r.Id}  
+                  </apex:column>
+                   <apex:column >
+				  <apex:facet name="header">
+					<apex:outputPanel >Report Delivery Type</apex:outputPanel>
+				  </apex:facet>
+                    {!r.Report_Delivery_Type__c}  
+                  </apex:column>
+ 
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageblock >
+        <apex:pageBlockButtons location="bottom" >
+            <apex:outputPanel id="myButtons">
+            Total Records # {!total_size}    Showing Page # {!pageNumber} of {!totalPages} 
+                    <apex:commandButton action="{!Beginning}" title="Beginning" value="<<" disabled="{!disablePrevious}" reRender="pb1,myButtons"/>
+                    <apex:commandButton action="{!Previous}" title="Previous" value="<" disabled="{!disablePrevious}" reRender="pb1,myButtons"/>        
+                    <apex:commandButton action="{!Next}" title="Next" value=">" disabled="{!disableNext}" reRender="pb1,myButtons"/>
+                    <apex:commandButton action="{!End}" title="End" value=">>" disabled="{!disableNext}" reRender="pb1,myButtons"/>        
+
+            </apex:outputPanel>
+        </apex:pageBlockButtons>
+            </apex:pageblock>
+    </apex:form>
+</apex:page>

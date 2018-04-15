@@ -1,0 +1,84 @@
+<apex:page standardController="Case" showHeader="true" sidebar="true" extensions="ChangeCaseOwnerControllerExt">
+    <apex:pageMessages id="emsg"></apex:pageMessages>
+    <apex:form id="frm">     
+        <apex:pageBlock id="pb">
+            <apex:pageblockButtons id="pbbuttons" >
+                <apex:commandButton value="Save" action="{!changeCaseOwner}" oncomplete="testIsInConsole();" reRender="Refsh,emsg" />
+                <apex:commandButton value="Cancel" action="{!cancelAction}" onclick="testIsInConsole()" reRender="frm,Refsh"/>
+            </apex:pageblockButtons>
+            <apex:pageBlockSection columns="1" title="Select New Owner" collapsible="false" id="pbs">                
+                <apex:outputText value="{!Case.CaseNumber}"/>  
+                <apex:pageBlockSectionItem > Case Owner
+                    <apex:outputPanel layout="block" style="float: left">
+                        <apex:outputPanel >
+                            <div class="requiredInput"><div class="requiredBlock"/>     
+                                <apex:inputField value="{!Case.Ownerid}" id="cowner" />       
+                            </div>         
+                        </apex:outputPanel>                              
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>            
+        </apex:pageBlock>  
+    </apex:form>    
+      
+    <apex:includeScript value="/soap/ajax/26.0/connection.js"/> 
+    <apex:includeScript value="/support/console/30.0/integration.js"/>    
+    <script type="text/javascript">    
+    var changeOwnerLink = document.getElementsByClassName('lookupInput');
+    var parent = changeOwnerLink[0].parentElement;
+    parent.childNodes[0].style.display = "none";
+    //This function is used to close the Tab 
+    function doCloseTab() {
+        sforce.console.getEnclosingTabId(closeSubtab);
+    }      
+    var closeSubtab = function closeSubtab(result) {
+        var tabId = result.id;
+        sforce.console.closeTab(tabId);
+    };
+    
+    ///end of the close tab function
+    
+    var refreshSuccessVar = function refreshSuccess(result) 
+    { 
+        //Report whether refreshing the primary tab was successful 
+        if (result.success == true) 
+        { 
+            
+            doCloseTab();
+        } 
+        else 
+        { 
+            
+        } 
+    }; 
+    
+    var showTabIdVar = function showTabId(result) 
+    { 
+        var tabId = result.id; 
+        sforce.console.refreshPrimaryTabById(tabId, true, refreshSuccessVar, true); 
+    }; 
+    
+    function testRefreshPrimaryTabById() 
+    { 
+        
+        sforce.console.getEnclosingPrimaryTabId(showTabIdVar); 
+        
+    }  
+      function testIsInConsole() {
+            var isError = {!Iserror};
+            alert('isError---------->'+isError );
+            if (sforce.console.isInConsole() && isError == false){
+                
+                testRefreshPrimaryTabById();
+                
+            }else{
+                if(isError === false){
+                    window.top.location = '/{!case.id}';
+                    
+                }
+                
+            }
+            
+        }
+    </script>
+</apex:page>

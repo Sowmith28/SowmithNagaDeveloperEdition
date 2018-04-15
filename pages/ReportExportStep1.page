@@ -1,0 +1,122 @@
+<apex:page standardController="Export_Report__c" extensions="ReportExportStageController" sidebar="false" showHeader="false" action="{!search}">
+   <script>
+ var newWin=null;
+ function openLookupPopup(name, id)
+ {
+  var url="/apex/CustomAccountLookup?namefield=" + name + "&idfield=" + id;
+  newWin=window.open(url, 'Popup','height=500,width=600,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
+  if (window.focus) 
+  {
+   newWin.focus();
+  }
+    
+     return false;
+    }
+       
+ function closeLookupPopup()
+ {
+    if (null!=newWin)
+    {
+       newWin.close();
+    }  
+ }
+</script> 
+    
+    
+    <script type="text/javascript"> 
+  function openLookup(baseURL, width, modified, searchParam){
+    var originalbaseURL = baseURL;
+    var originalwidth = width;
+    var originalmodified = modified;
+    var originalsearchParam = searchParam;
+
+    var lookupType = baseURL.substr(baseURL.length-3, 3);
+    if (modified == '1') baseURL = baseURL + searchParam;
+
+    var isCustomLookup = false;
+
+    // Following "001" is the lookup type for Account object so change this as per your standard or custom object
+    if(lookupType == "00O"){
+
+      var urlArr = baseURL.split("&");
+      var txtId = '';
+      if(urlArr.length > 2) {
+        urlArr = urlArr[1].split('=');
+        txtId = urlArr[1];
+      }
+
+      // Following is the url of Custom Lookup page. You need to change that accordingly
+      baseURL = "/apex/CustomAccountLookup?txt=" + txtId;
+
+      // Following is the id of apex:form control "myForm". You need to change that accordingly
+      baseURL = baseURL + "&frm=" + escapeUTF("{!$Component.targetId}");
+      if (modified == '1') {
+        baseURL = baseURL + "&lksearch=" + searchParam;
+      }
+
+      // Following is the ID of inputField that is the lookup to be customized as custom lookup
+      if(txtId.indexOf('rpName') > -1 ){
+        isCustomLookup = true;
+      }
+    }
+
+
+    if(isCustomLookup == true){
+      openPopup(baseURL, "lookup", 350, 480, "width="+width+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+    }
+    else {
+      if (modified == '1') originalbaseURL = originalbaseURL + originalsearchParam;
+      openPopup(originalbaseURL, "lookup", 350, 480, "width="+originalwidth+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+    } 
+  }
+</script>
+
+    
+    <apex:form id="Myform">
+        <br/>
+        <br/>
+        <apex:pageblock id="pbs" >
+          <apex:outputText value="Page 1 of 4 " style="font-style:bold; margin-left: 50px; margin-right: 2px;" ></apex:outputText>   
+
+            </apex:pageblock>
+        <apex:pageBlock >
+       
+         <apex:pageblockSection >
+             
+             
+        
+ 
+            <apex:inputtext value="{!exprep.Report_Name__c}" id="rpName"  ></apex:inputText> <a href="#"  onclick="openLookupPopup('{!$Component.rpName}', '{!$Component.rpName}'); return false">
+           <!--  <apex:commandButton id="btnGo" value="Go" action="{!Search}" rerender="searchResults"/> -->
+             
+                        <img src="/s.gif" class="lookupIcon" style ="margin-Right: 1px; margin-left: -300px;" onmouseout="this.className='lookupIcon';" onmouseover="this.className='lookupIconOn';"  />  </a>  
+         
+        <!--  <apex:outputPanel id="pnlSearchResults" style="margin:10px;height:350px;overflow-Y:auto;" layout="block">
+          
+            
+              <apex:pageBlockTable value="{!results}" var="a" id="tblResults">
+                <apex:column >
+                  <apex:facet name="header">
+                    <apex:outputPanel >Name</apex:outputPanel>
+                  </apex:facet>
+                   <apex:commandLink value="{!a.Name}" action="{!Reportnamefromblock}" reRender="rpName">
+                   <apex:param Name="ReportName" value="{!a.Name}" assignTo="{!ReportNameone}"/> 
+                   </apex:commandLink>     
+                </apex:column>
+                
+              </apex:pageBlockTable>
+              
+            
+          </apex:outputPanel>-->
+    
+
+             
+             
+             </apex:pageblockSection>
+            <apex:pageblockbuttons >
+                 <apex:commandButton action="{!Cancel}" value="Cancel"/>
+                <apex:commandButton action="{!NextButton}" value="Next" style="margin-left: 600px; margin-right: 20px" />
+            </apex:pageblockbuttons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

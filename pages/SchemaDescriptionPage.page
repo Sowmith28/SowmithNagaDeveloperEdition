@@ -1,0 +1,19 @@
+<apex:page controller="SchemaDescripton">
+    <apex:form >
+        <apex:pageBlock title="Showing Related Childs" >
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton action="{!showChilds}" value="Show Childs" reRender="childpbt"/>
+            </apex:pageBlockButtons>
+            <apex:outputLabel value="Select the Parent Object"></apex:outputLabel> &nbsp; &nbsp; &nbsp;
+            <apex:selectList value="{!selectObject}" size="1">
+                <apex:selectOptions value="{!listofParents}" />
+            </apex:selectList>
+            <br/>
+            <apex:pageBlockTable value="{!listOfChilds}" var="list" title="Related Child Objects" id="childpbt">
+				
+            	<apex:column value="{!list}" headerValue="Child Object Name"/>
+                <apex:column value="{!list}" headerValue="Show fields"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        </apex:form>
+</apex:page>

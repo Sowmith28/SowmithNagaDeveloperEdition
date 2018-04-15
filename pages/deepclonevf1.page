@@ -1,0 +1,20 @@
+<apex:page controller="deepCloneClass" sidebar="false">
+     <script>
+   function submitObjectInfo(){
+      alert("clone is created");
+       }
+    </script>
+    <apex:form >
+        <apex:pageBlock >
+             <apex:actionFunction action="{!newlyObtainedObject}" name="submitObjectInfo" />
+            <apex:pageBlockSection columns="2" >
+                <apex:outputLabel value="Select the object to be cloned" title="Select object "></apex:outputLabel> 
+                <apex:selectList size="1" value="{!cloningObject}" onchange="submitObjectInfo()">
+                    <apex:selectOptions value="{!objectsList}">
+                    </apex:selectOptions>
+                </apex:selectList>
+                
+         </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

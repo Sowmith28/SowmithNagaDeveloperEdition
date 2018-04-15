@@ -1,0 +1,43 @@
+<apex:page standardController="Export_Report__c" extensions="ReportExportStageController" sidebar="false" showHeader="false" action="{!search}">
+    <apex:form >
+        <br/>
+        <br/>
+        <apex:pageblock >
+          <apex:outputText value="Page 1 of 4 " style="font-style:bold; margin-left: 50px; margin-right: 2px;" ></apex:outputText>   
+
+            </apex:pageblock>
+        <apex:pageBlock >
+         <apex:pageblockSection >
+             
+             
+            <apex:actionRegion >  
+          <apex:outputPanel id="top" layout="block" style="margin:5px;padding:10px;padding-top:2px;">
+            <apex:outputLabel value="Search" style="font-weight:Bold;padding-right:10px;" for="txtSearch"/>
+            <apex:inputText id="txtSearch" value="{!searchString}" />
+              <span style="padding-left:5px"><apex:commandButton id="btnGo" value="Go" action="{!Search}" rerender="searchResults"></apex:commandButton></span>
+          </apex:outputPanel>
+ 
+          <apex:outputPanel id="pnlSearchResults" style="margin:10px;height:350px;overflow-Y:auto;" layout="block">
+            <apex:pageBlock id="searchResults"> 
+              <apex:pageBlockTable value="{!results}" var="a" id="tblResults">
+                <apex:column >
+                  <apex:facet name="header">
+                    <apex:outputPanel >Name</apex:outputPanel>
+                  </apex:facet>
+                   <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!TextBox}_lkid','{!TextBox}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.Name}</apex:outputLink>     
+                </apex:column>
+              </apex:pageBlockTable>
+            </apex:pageBlock>
+          </apex:outputPanel>
+        </apex:actionRegion>
+             
+             
+             
+             </apex:pageblockSection>
+            <apex:pageblockbuttons >
+                 <apex:commandButton action="{!Cancel}" value="Cancel"/>
+                <apex:commandButton action="{!NextButton}" value="Next" style="margin-left: 600px; margin-right: 20px" />
+            </apex:pageblockbuttons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

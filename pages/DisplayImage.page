@@ -1,0 +1,30 @@
+<apex:page showHeader="false">
+    <apex:form >
+        
+    <apex:pageBlock >
+        
+        <apex:image url="https://developer.salesforce.com/files/salesforce-developer-network-logo.png"/>
+       ({! IF($User.isActive, $User.Username, 'inactive') })
+
+        <p>
+            Todays date is {!Today()}
+        </p>
+        <p>
+            next week date is {!Today()+7}<br/>
+            Maximum of the numbers{!Max(1,2,3,4,5,5)}<br/>
+           
+            Sqrt of 49 is{!sqrt(49)}<br/>
+            is it true{!contains('salesforce.com','frce.com')}
+            
+        </p>
+        <p>
+            
+            
+            
+            The project is {!if(contains('sowmith','mith'),'submitted','denied')}
+            {! if(year(Today())>2015,'yes','no')}
+            
+        </p>
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,37 @@
+<apex:page controller="Contoller1" action="{!geta}" id="pageid" name="testform"  title="TestPage" sidebar="false">
+    <apex:tabpanel switchtype="client" selectedTab="name1" id="theTabpanel">
+    <apex:tab label="One" name="name1" id="TabOne"> content for TabOne </apex:tab>
+   <apex:tab label="Two" name="name2" id="TabTwo"> content for TabTwo </apex:tab>
+    </apex:tabpanel>
+    <apex:form id="Testform" >
+    {!firstMethod}
+    {!a}<br/>
+       <apex:outputLabel >Second form</apex:outputLabel>
+    
+    
+    <apex:outputLabel value="Name"></apex:outputLabel>
+  <!--  <apex:inputField value="{!a[0].name}" /> -->
+    <apex:pageblock title="list of account">
+    <apex:pageBlockSection title="Myblock" columns="4">
+         <apex:outputText value="{!ex1}"></apex:outputText> 
+        <apex:inputText label="Account Name" value="{!Nameofaccount}">
+
+        </apex:inputText>
+        <apex:outputLink value="https://www.salesforce.com">www.salesforce.com</apex:outputLink>
+    </apex:pageBlockSection> 
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton action="{!saveaccount}" value="Save"/>
+           
+        </apex:pageBlockButtons>
+    <apex:pageBlockTable value="{!listOfAccounts}" var="acc"  title="MyTable">
+        <apex:column value="{!acc.id}"/>
+        <apex:column value="{!acc.name}"/>
+         <apex:column value="{!acc.industry}"/>
+        </apex:pageBlockTable>
+    </apex:pageblock>
+        </apex:form>
+
+	
+
+    
+</apex:page>

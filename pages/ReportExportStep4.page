@@ -1,0 +1,46 @@
+<apex:page standardController="Export_Report__c" extensions="ReportExportStageController">
+<apex:form >
+     <apex:pageblock >
+          <apex:outputText value="Page 4 of 4 " style="font-style:bold; margin-left: 50px; margin-right: 2px;" ></apex:outputText>   
+
+            </apex:pageblock>
+            <apex:pageblock >
+                 <apex:pageBlockSection columns="1">
+          <!--	<apex:outputLabel value="Report Name"></apex:outputLabel>-->
+             <apex:inputText value="{!exprep.Report_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+                </apex:pageBlockSection>
+            </apex:pageblock>
+        
+                 
+            <apex:pageblock >
+                <apex:pageBlockSection columns="1">
+          	 <!--<apex:outputLabel value="Report File Name"></apex:outputLabel> -->
+             <apex:inputText value="{!exprep.Report_File_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+ 			 <!--	<apex:outputLabel value="Report Delivery Name"></apex:outputLabel> -->
+             <apex:inputText value="{!exprep.Report_Delivery_Type__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+			 </apex:pageBlockSection>
+            </apex:pageblock>
+                <apex:pageblock >
+                      <apex:pageBlockSection columns="1">
+          	 <!-- <apex:outputLabel value="To Address"></apex:outputLabel>-->
+             <apex:inputText value="{!exprep.To_address__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+ 			 <!--	<apex:outputLabel value="CC Address"></apex:outputLabel>-->
+             <apex:inputText value="{!exprep.cc_address__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+			 <!--	<apex:outputLabel value="BCC Address"></apex:outputLabel>-->
+             <apex:inputText value="{!exprep.Bcc_address__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+			 </apex:pageBlockSection>
+            </apex:pageblock>
+       <apex:pageblock > 
+           <apex:pageBlockSection >
+    <apex:inputfield value="{!Export_Report__c.When_to_Run__c}"></apex:inputfield>
+              
+               </apex:pageBlockSection>
+                       <apex:pageblockbuttons >
+                        <apex:commandButton action="{!Cancel}" value="Cancel"/>
+                   <apex:commandButton action="{!PrevButtonThree}" value="Prev" style="font-style:bold; margin-left: 600px;"/>
+                <apex:commandButton action="{!SaveButton}" value="Save"  />
+            </apex:pageblockbuttons>
+        </apex:pageblock>
+
+  </apex:form>
+</apex:page>

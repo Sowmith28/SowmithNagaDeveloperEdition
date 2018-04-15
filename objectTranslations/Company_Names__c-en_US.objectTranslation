@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Company_Names</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Company_Names</value>
+    </caseValues>
+    <fields>
+        <label><!-- Company_Code --></label>
+        <name>Company_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Established_Day --></label>
+        <name>Established_Day__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

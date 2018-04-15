@@ -1,0 +1,40 @@
+<apex:page standardController="Export_Report__c" extensions="viewCustomReportController" sidebar="false" showHeader="false" >
+    <apex:form >
+    <apex:pageBlock >
+     <apex:pageBlockButtons location="bottom" >
+                <apex:commandButton value="Edit" action="{!RedirecttoEdit}" > 
+            </apex:commandButton>
+            &nbsp;
+            <apex:commandButton value="Delete"  onclick="if(!confirm('Are you sure?')) return false;"  action="{!deleteRecord}">
+            </apex:commandButton>
+                        </apex:pageBlockButtons>
+            </apex:pageBlock>
+
+    </apex:form>
+   <apex:form >   
+
+          
+              <apex:pageblock title="Export Report Details"  >
+             <apex:pageBlockSection columns="2">
+             <apex:outputfield value="{!exprep.Report_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+              <apex:outputfield value="{!exprep.Report_Id__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+              <apex:outputfield value="{!exprep.isActive__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />  
+                 <apex:outputfield value="{!exprep.Report_File_Name__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+              <apex:outputfield value="{!exprep.Report_Delivery_Type__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />                 
+                 </apex:pageBlockSection>
+            </apex:pageblock>
+       <apex:pageblock title="Email" >
+             <apex:pageBlockSection columns="2">
+             <apex:outputfield value="{!exprep.To_address__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+              <apex:outputfield value="{!exprep.cc_address__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+             <apex:outputfield value="{!exprep.Bcc_address__c}"  style="font-style:bold; margin-left: 50px; margin-right: 2px;" />
+                 </apex:pageBlockSection>
+            </apex:pageblock>
+        <apex:pageBlock title="Schedule" >    
+            <apex:pageMessages ></apex:pageMessages>
+         <apex:pageblockSection columns="2">
+             <apex:outputfield value="{!exprep.When_to_Run__c}" />          
+         </apex:pageblockSection>
+       </apex:pageBlock>       
+   </apex:form>
+</apex:page>

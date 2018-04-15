@@ -1,0 +1,15 @@
+<apex:page controller="ass1">
+    <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockSection >
+       <apex:pageBlockTable value="{!arr}" var="w">
+        <apex:column value="{!w.Name}"/>
+            <apex:column value="{!w.Email_id__c}"/>
+            <apex:column value="{!w.Expected_salary__c}"/>
+            <apex:column value="{!w.Prospect_Rating__c}"/>
+        </apex:pageBlockTable>
+        
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
