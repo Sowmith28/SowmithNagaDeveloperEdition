@@ -7,8 +7,4 @@ Virtual public class A {
     }
 
 }
-<<<<<<< Updated upstream
 //Adding a dummy comment
-=======
-//Added a code Piece
->>>>>>> Stashed changes
